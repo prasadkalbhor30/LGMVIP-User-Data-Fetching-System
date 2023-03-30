@@ -1,0 +1,124 @@
+/* ======================== navbar css ================================ */
+
+nav {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 80px;
+  padding: 0 20px;
+  background-color: #a9f1b8;
+}
+
+.navbar-brand {
+  text-align: center;
+  width: 30%;
+  font-size: x-large;
+  font-weight: bold;
+  color: brown;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* ======================== user card css ================================ */
+
+
+.user-avatar {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.user-card-grid {
+  display: grid;
+  grid-gap: 20px;
+  padding: 20px;
+  margin: 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  max-height: calc(3 * (250px + 1rem));
+  /* Set max height to 3 times the height of a single user card */
+  overflow-y: auto;
+  /* Add vertical scrollbar if the cards exceed the max height */
+}
+
+.user-card {
+  border-radius: 10px;
+  margin: 20px;
+  background-color: #fdc0c0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+}
+
+.user-name {
+
+  font-weight: bold;
+  margin-bottom: 5px;
+  font-size: 1.2rem;
+  margin-top: 1rem;
+}
+
+.user-email {
+  margin-top: 0.5rem;
+  color: #666;
+}
+
+
+/* ======================== loader css ================================ */
+
+
+.loader {
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.loading-spinner {
+  display: inline-block;
+  position: relative;
+  width: 50px;
+  height: 50px;
+  flex-direction: column;
+}
+
+.loading-spinner::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 50px;
+  margin: auto;
+  border-radius: 50%;
+  border: 6px solid #000;
+  border-color: #000 transparent #000 transparent;
+  animation: loading-spinner__rotate 1.2s linear infinite;
+}
+
+@keyframes loading-spinner__rotate {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+
+@media only screen and (max-width: 700px) {
+  .navbar-brand {
+    font-size: medium;
+  }
+}
